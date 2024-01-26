@@ -13,8 +13,8 @@ public class Car : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Velocity = 5f;
-        RotateSpeed = 50f;
+        Velocity = 50f;
+        RotateSpeed = 100f;
     }
 
     // Update is called once per frame
@@ -27,7 +27,8 @@ public class Car : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, Velocity));
+            this.transform.Translate(Vector3.forward * Velocity * Time.deltaTime);
+            //this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, Velocity));
         }
 
         if (Input.GetKey(KeyCode.D))
