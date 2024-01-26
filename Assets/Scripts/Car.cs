@@ -5,21 +5,38 @@ using UnityEngine;
 public class Car : MonoBehaviour
 {
     [SerializeField]
-    public float Velocity;
+    public float Velocity = 50f;
 
     [SerializeField]
-    public float RotateSpeed;
+    public float RotateSpeed = 100f;
+
+    private bool charging = false;
+
+    private float originalVelocity;
+    private Vector3 originalPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        Velocity = 50f;
-        RotateSpeed = 100f;
+        Velocity = 4f;
+        RotateSpeed = 80f;
+
+        originalPosition = this.transform.position;
+        originalVelocity = Velocity;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(charging)
+        {
+            Velocity *= 1.5f;
+            charging = false;
+        } else
+        {
+            Velocity = originalVelocity;
+        }
+
         if (Input.GetKey(KeyCode.A))
         {
             this.transform.Rotate(Vector3.down * RotateSpeed * Time.deltaTime);
@@ -34,6 +51,15 @@ public class Car : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             this.transform.Rotate(Vector3.up * RotateSpeed * Time.deltaTime);
+        }
+
+        if(Input.GetKey(KeyCode.R)) {
+            this.transform.position = originalPosition;
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            charging = true;
         }
     }
 }
