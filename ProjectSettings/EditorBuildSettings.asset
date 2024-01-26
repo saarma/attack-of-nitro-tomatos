@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SceneMatti.unity
+    guid: 49e99216deb0cbf47ae0164b0660aaf2
   m_configObjects: {}
