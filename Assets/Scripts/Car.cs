@@ -15,6 +15,8 @@ public class Car : MonoBehaviour
     private float originalVelocity;
     private Vector3 originalPosition;
 
+    private int enemyHitCounter = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +62,10 @@ public class Car : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift))
         {
             charging = true;
+        }
+
+        if(Input.GetKey(KeyCode.C)) {
+            enemyHitCounter++;
         }
     }
 }
