@@ -14,6 +14,9 @@ public class Car : MonoBehaviour
     [SerializeField]
     public float RotateSpeed = 80f;
 
+    //charging
+    [SerializeField]
+    private float chargeModifier = 1.5f;
     private bool charging = false;
 
     private float originalVelocity;
@@ -92,7 +95,7 @@ public class Car : MonoBehaviour
     void ChangeChargeSpeed() {
         if(charging)
         {
-            Velocity *= 1.5f;
+            Velocity *= chargeModifier;
         } else
         {
             Velocity = originalVelocity;
