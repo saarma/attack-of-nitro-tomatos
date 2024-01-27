@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Car : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class Car : MonoBehaviour
     private float originalVelocity;
     private Vector3 originalPosition;
 
+    //enemyhitcounter
+    public TextMeshProUGUI countText; 
+    private int enemyHitCounter = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +28,8 @@ public class Car : MonoBehaviour
 
         originalPosition = this.transform.position;
         originalVelocity = Velocity;
+
+        SetCountText();
     }
 
     // Update is called once per frame
@@ -61,5 +68,14 @@ public class Car : MonoBehaviour
         {
             charging = true;
         }
+
+        if(Input.GetKey(KeyCode.C)) {
+            enemyHitCounter++;
+        }
+    }
+
+    void SetCountText() 
+    {
+        countText.text =  "Tomatoes splattered: " + enemyHitCounter.ToString();
     }
 }
