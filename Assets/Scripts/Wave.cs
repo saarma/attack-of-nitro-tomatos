@@ -8,4 +8,6 @@ public class Wave
     public float timeToNextWave;
     [HideInInspector] public int enemiesLeft;
 
+    public string WaveDescription = "";
+
 }

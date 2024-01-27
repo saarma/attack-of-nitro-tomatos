@@ -3283,19 +3283,89 @@ MonoBehaviour:
   waves:
   - tomatoes:
     - {fileID: 6335787899904350437, guid: 3bde3171a79ae48bc95afad075ac7666, type: 3}
+    - {fileID: 6335787899904350437, guid: 3bde3171a79ae48bc95afad075ac7666, type: 3}
+    - {fileID: 6335787899904350437, guid: 3bde3171a79ae48bc95afad075ac7666, type: 3}
+    - {fileID: 6335787899904350437, guid: 3bde3171a79ae48bc95afad075ac7666, type: 3}
     timeToNextEnemy: 4
     timeToNextWave: 6
     enemiesLeft: 0
+    WaveDescription: "Ensimm\xE4inen helppo wave"
   - tomatoes:
     - {fileID: 5498267910656873587, guid: 12c3388194beb44329fa720b68c79e66, type: 3}
-    timeToNextEnemy: 4
-    timeToNextWave: 9
+    - {fileID: 5498267910656873587, guid: 12c3388194beb44329fa720b68c79e66, type: 3}
+    - {fileID: 5498267910656873587, guid: 12c3388194beb44329fa720b68c79e66, type: 3}
+    - {fileID: 5498267910656873587, guid: 12c3388194beb44329fa720b68c79e66, type: 3}
+    timeToNextEnemy: 3
+    timeToNextWave: 6
     enemiesLeft: 0
+    WaveDescription: Hieman nopeammat spawnit
   - tomatoes:
     - {fileID: 5338053885047962398, guid: a8e0f11c55abf473c905ed8d37c6f338, type: 3}
     timeToNextEnemy: 4
-    timeToNextWave: 14
+    timeToNextWave: 6
     enemiesLeft: 0
+    WaveDescription: Celery dude
+  - tomatoes:
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    - {fileID: 765822444865929341, guid: f2597736b8656423c829f1707067c40f, type: 3}
+    timeToNextEnemy: 1
+    timeToNextWave: 10
+    enemiesLeft: 0
+    WaveDescription: Iha hitosti tomaattia
+  - tomatoes:
+    - {fileID: 5338053885047962398, guid: a8e0f11c55abf473c905ed8d37c6f338, type: 3}
+    timeToNextEnemy: 0.1
+    timeToNextWave: 10
+    enemiesLeft: 0
+    WaveDescription: Viimeinen selleri
   spawnPoints:
   - {fileID: 184152717}
   - {fileID: 425017906}
@@ -3887,7 +3957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 437368, guid: b8433bdc340959d4b92f2fa9fc42d091, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.681
+      value: -13.012
       objectReference: {fileID: 0}
     - target: {fileID: 437368, guid: b8433bdc340959d4b92f2fa9fc42d091, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5389,7 +5459,7 @@ Transform:
   m_GameObject: {fileID: 1646097960}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.17364816, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: -5.94, y: 4.78, z: -20.48}
+  m_LocalPosition: {x: -15.29, y: 4.78, z: -22.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
