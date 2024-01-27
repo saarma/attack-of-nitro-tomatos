@@ -26,6 +26,9 @@ public class Car : MonoBehaviour
     public TextMeshProUGUI countText; 
     private int enemyHitCounter = 0;
 
+    [SerializeField]
+    private WaveSpawner waveSpawner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +46,29 @@ public class Car : MonoBehaviour
         GoForward();
 
         SetCountText();
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        Debug.Log(other);
+
+        if(other.gameObject.CompareTag("Tomato")) {
+            Debug.Log("Hit tomato!");
+
+            var enemy = other.gameObject;
+            var enemyDiePosition = enemy.transform.position;
+            enemy.SetActive(false);
+
+            IncreaseEnemyHitCounter();
+
+            //Log enemy die position
+            Debug.Log("enemy die position x: " + enemyDiePosition.x);
+            Debug.Log("enemy die position y: " + enemyDiePosition.y);
+            Debug.Log("enemy die position z: " + enemyDiePosition.z);
+
+            if(waveSpawner != null) {
+                waveSpawner.GetCurrentWave().enemiesLeft--;
+            }
+        }
     }
 
     void GoForward() {
@@ -88,8 +114,12 @@ public class Car : MonoBehaviour
 
         //For debugging
         if(Input.GetKeyDown(KeyCode.C)) {
-            enemyHitCounter++;
+            IncreaseEnemyHitCounter();
         }
+    }
+
+    void IncreaseEnemyHitCounter() {
+        enemyHitCounter++;
     }
 
     void ChangeChargeSpeed() {
