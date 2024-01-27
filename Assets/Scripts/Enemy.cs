@@ -5,6 +5,8 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     public GameObject player;
     public float speed;
+    public float BodyTimer = 3f;
+    public bool IsDead = false;
 
     private WaveSpawner waveSpawner;
 
@@ -25,7 +27,32 @@ public class Enemy : MonoBehaviour
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        if (IsDead)
+        {
+            BodyTimer -= Time.deltaTime;
+
+            if (BodyTimer <= 0f)
+            {
+                //this.GetComponent<Rigidbody>().
+                Destroy(gameObject);
+                //this.GetComponent<GameObject>().SetActive(false);
+            }
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Car"))
+        {
+            this.GetComponent<Collider>().enabled = false;
+
+            var oldScale = this.GetComponent<Transform>().localScale;
+            this.GetComponent<Transform>().localScale = new Vector3(oldScale.x, 5, oldScale.z);
+            IsDead = true;
+        }
+    }
 }
