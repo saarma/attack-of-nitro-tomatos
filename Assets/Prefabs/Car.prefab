@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4678413420796661626}
   m_Layer: 0
   m_Name: Car
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +178,9 @@ MonoBehaviour:
   Velocity: 4
   VelocityStep: 1
   RotateSpeed: 80
+  chargeModifier: 1.6
   countText: {fileID: 0}
+  waveSpawner: {fileID: 0}
 --- !u!82 &8497968598446339617
 AudioSource:
   m_ObjectHideFlags: 0
