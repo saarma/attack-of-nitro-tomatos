@@ -44,15 +44,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void KillTomato()
     {
-        if (other.gameObject.CompareTag("Car") && ! IsDead)
-        {
-            this.GetComponent<Collider>().enabled = false;
+        IsDead = true;
+        this.GetComponent<Collider>().enabled = false;
 
-            var oldScale = this.GetComponent<Transform>().localScale;
-            this.GetComponent<Transform>().localScale = new Vector3(oldScale.x, 5, oldScale.z);
-            IsDead = true;
-        }
+        var oldScale = this.GetComponent<Transform>().localScale;
+        this.GetComponent<Transform>().localScale = new Vector3(oldScale.x, 5, oldScale.z);
     }
 }

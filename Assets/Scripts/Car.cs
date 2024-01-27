@@ -50,12 +50,13 @@ public class Car : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         //Debug.Log(other);
+        if (other.gameObject.CompareTag("Tomato") && !other.GetComponent<Enemy>().IsDead)
+        {
+            other.GetComponent<Enemy>().KillTomato();
+            //Debug.Log("TOMATO IS MURDERED!");
 
-        if(other.gameObject.CompareTag("Tomato") && !other.GetComponent<Enemy>().IsDead) {
-            Debug.Log("Hit tomato!");
-
-            var enemy = other.gameObject;
-            var enemyDiePosition = enemy.transform.position;
+            //var enemy = other.gameObject;
+            //var enemyDiePosition = enemy.transform.position;
             //enemy.SetActive(false);
 
             IncreaseEnemyHitCounter();
@@ -65,7 +66,8 @@ public class Car : MonoBehaviour
             //Debug.Log("enemy die position y: " + enemyDiePosition.y);
             //Debug.Log("enemy die position z: " + enemyDiePosition.z);
 
-            if(waveSpawner != null) {
+            if (waveSpawner != null)
+            {
                 waveSpawner.GetCurrentWave().enemiesLeft--;
             }
         }
