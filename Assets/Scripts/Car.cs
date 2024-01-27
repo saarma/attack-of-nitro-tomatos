@@ -49,10 +49,10 @@ public class Car : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log(other);
+        //Debug.Log(other);
 
         if(other.gameObject.CompareTag("Tomato")) {
-            Debug.Log("Hit tomato!");
+            //Debug.Log("Hit tomato!");
 
             var enemy = other.gameObject;
             var enemyDiePosition = enemy.transform.position;
@@ -138,6 +138,7 @@ public class Car : MonoBehaviour
     { 
         if (countText != null)
         {
+            Debug.Log("SetCountText: " + enemyHitCounter.ToString()); 
             countText.text = "Tomatoes splattered: " + enemyHitCounter.ToString();
         }
     }

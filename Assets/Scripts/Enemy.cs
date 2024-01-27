@@ -8,16 +8,12 @@ public class Enemy : MonoBehaviour
     public float BodyTimer = 3f;
     public bool IsDead = false;
 
-    private WaveSpawner waveSpawner;
-
     private int HP = 1;
     private int AttackPower = 1;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        waveSpawner = GetComponentInParent<WaveSpawner>();
- 
+        player = GameObject.FindGameObjectWithTag("Player"); 
     }
 
     // Update is called once per frame
@@ -33,9 +29,7 @@ public class Enemy : MonoBehaviour
 
             if (BodyTimer <= 0f)
             {
-                //this.GetComponent<Rigidbody>().
                 Destroy(gameObject);
-                //this.GetComponent<GameObject>().SetActive(false);
             }
         }
         else
