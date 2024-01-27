@@ -84,14 +84,14 @@ public class Car : MonoBehaviour
             this.transform.Rotate(Vector3.down * RotateSpeed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             Velocity += VelocityStep;
             //this.transform.Translate(Vector3.forward * Velocity * Time.deltaTime);
             //this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, Velocity));
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             Velocity -= VelocityStep;
             //this.transform.Translate(Vector3.forward * Velocity * Time.deltaTime);
