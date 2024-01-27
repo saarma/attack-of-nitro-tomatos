@@ -809,7 +809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184152718}
   m_Layer: 0
-  m_Name: Spawnpoint
+  m_Name: SpawnpointShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1663,6 +1663,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70df0be07952db84db2f8317651fd17f, type: 3}
+--- !u!1 &425017906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425017907}
+  m_Layer: 0
+  m_Name: SpawnpointRightCorner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &425017907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425017906}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.85, y: 0, z: -6.65}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 960865928}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &458017242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,6 +2762,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 184152718}
+  - {fileID: 425017907}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &960865929
@@ -2768,7 +2800,9 @@ MonoBehaviour:
     timeToNextEnemy: 4
     timeToNextWave: 14
     enemiesLeft: 0
-  spawnPoint: {fileID: 184152717}
+  spawnPoints:
+  - {fileID: 184152717}
+  - {fileID: 425017906}
   waveCounter: {fileID: 1738328227}
   currentWaveIndex: 0
 --- !u!1001 &1015147234
@@ -3712,6 +3746,7 @@ GameObject:
   - component: {fileID: 1331845213}
   - component: {fileID: 1331845212}
   - component: {fileID: 1331845216}
+  - component: {fileID: 1331845217}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3807,6 +3842,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPosition2Target: {fileID: 1646097960}
   cameraPosition1Target: {fileID: 692610828}
+--- !u!45 &1331845217
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331845211}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 369b9ebe3a62b904dbc19bd332b44086, type: 2}
 --- !u!1001 &1332394595
 PrefabInstance:
   m_ObjectHideFlags: 0
