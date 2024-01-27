@@ -3782,7 +3782,6 @@ GameObject:
   - component: {fileID: 1331845212}
   - component: {fileID: 1331845215}
   - component: {fileID: 1331845216}
-  - component: {fileID: 1331845217}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3895,23 +3894,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPosition2Target: {fileID: 1646097960}
   cameraPosition1Target: {fileID: 692610828}
---- !u!114 &1331845217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331845211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eebea7115c2ba83479c95ba70c110751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DoorRange: 1
-  DoorSpeed: 1
-  DoorLeft: {fileID: 3674691}
-  DoorRight: {fileID: 1652065292}
-  Opening: 1
 --- !u!1001 &1332394595
 PrefabInstance:
   m_ObjectHideFlags: 0
