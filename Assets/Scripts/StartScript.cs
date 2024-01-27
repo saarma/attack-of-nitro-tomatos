@@ -55,7 +55,7 @@ public class StartScript : MonoBehaviour
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene("miikan", LoadSceneMode.Additive);
+        SceneManager.LoadScene("miikan");  
     }
 
     // Update is called once per frame

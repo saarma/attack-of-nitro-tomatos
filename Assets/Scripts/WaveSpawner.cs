@@ -81,6 +81,7 @@ public class WaveSpawner : MonoBehaviour
             for (int i = 0; i < waves[currentWaveIndex].tomatoes.Length; i++)
             {
                 Enemy enemy = Instantiate(waves[currentWaveIndex].tomatoes[i], spawnPoint.transform);
+                //enemy.transform.Rotate(180, 0, 180);
                 //Set variables for joints, change mass within range
                 enemy.transform.SetParent(spawnPoint.transform);
                 yield return new WaitForSeconds(waves[currentWaveIndex].timeToNextEnemy);
