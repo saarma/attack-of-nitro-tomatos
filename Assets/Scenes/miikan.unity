@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 3674693}
   - component: {fileID: 3674692}
   m_Layer: 0
-  m_Name: DoorLeft
+  m_Name: KMarketDoorLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -809,7 +809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184152718}
   m_Layer: 0
-  m_Name: Spawnpoint
+  m_Name: SpawnpointShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -830,75 +830,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 960865928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &235779765
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7072302
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7069834
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -89.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423617508555286199, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8286230185851508454, guid: f2597736b8656423c829f1707067c40f, type: 3}
-      propertyPath: m_Name
-      value: Tomato3_Test
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f2597736b8656423c829f1707067c40f, type: 3}
 --- !u!1001 &236743195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1732,6 +1663,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70df0be07952db84db2f8317651fd17f, type: 3}
+--- !u!1 &425017906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425017907}
+  m_Layer: 0
+  m_Name: SpawnpointRightCorner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &425017907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425017906}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.85, y: 0, z: -6.65}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 960865928}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &458017242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2800,6 +2762,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 184152718}
+  - {fileID: 425017907}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &960865929
@@ -2837,7 +2800,9 @@ MonoBehaviour:
     timeToNextEnemy: 4
     timeToNextWave: 14
     enemiesLeft: 0
-  spawnPoint: {fileID: 184152717}
+  spawnPoints:
+  - {fileID: 184152717}
+  - {fileID: 425017906}
   waveCounter: {fileID: 1738328227}
   currentWaveIndex: 0
 --- !u!1001 &1015147234
@@ -3780,8 +3745,8 @@ GameObject:
   - component: {fileID: 1331845214}
   - component: {fileID: 1331845213}
   - component: {fileID: 1331845212}
-  - component: {fileID: 1331845215}
   - component: {fileID: 1331845216}
+  - component: {fileID: 1331845217}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3863,23 +3828,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1331845215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331845211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eebea7115c2ba83479c95ba70c110751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DoorRange: 1.3
-  DoorSpeed: 11
-  DoorLeft: {fileID: 3674691}
-  DoorRight: {fileID: 1652065292}
-  Opening: 1
 --- !u!114 &1331845216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3894,6 +3842,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPosition2Target: {fileID: 1646097960}
   cameraPosition1Target: {fileID: 692610828}
+--- !u!45 &1331845217
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331845211}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 369b9ebe3a62b904dbc19bd332b44086, type: 2}
 --- !u!1001 &1332394595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4293,6 +4250,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70df0be07952db84db2f8317651fd17f, type: 3}
+--- !u!1 &1499824488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1499824490}
+  - component: {fileID: 1499824489}
+  m_Layer: 0
+  m_Name: ScriptHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1499824489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499824488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eebea7115c2ba83479c95ba70c110751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DoorRange: 1
+  DoorSpeed: 0.5
+  DoorLeft: {fileID: 3674691}
+  DoorRight: {fileID: 1652065292}
+  Opening: 1
+--- !u!4 &1499824490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499824488}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1506429070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4663,7 +4669,7 @@ GameObject:
   - component: {fileID: 1652065294}
   - component: {fileID: 1652065293}
   m_Layer: 0
-  m_Name: DoorRight
+  m_Name: KMarketDoorRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9110,6 +9116,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 5141670008305751479}
+  - {fileID: 1499824490}
   - {fileID: 1331845214}
   - {fileID: 707520094}
   - {fileID: 458017246}
@@ -9172,7 +9179,6 @@ SceneRoots:
   - {fileID: 1891861607}
   - {fileID: 78022761}
   - {fileID: 1860540370}
-  - {fileID: 235779765}
   - {fileID: 1957288843}
   - {fileID: 490546567}
   - {fileID: 1425525708}

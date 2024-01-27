@@ -140,6 +140,7 @@ public class Car : MonoBehaviour
     { 
         if (countText != null)
         {
+            Debug.Log("SetCountText: " + enemyHitCounter.ToString()); 
             countText.text = "Tomatoes splattered: " + enemyHitCounter.ToString();
         }
     }

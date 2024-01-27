@@ -646,9 +646,9 @@ GameObject:
   - component: {fileID: 582705750878963457}
   - component: {fileID: 4178444822858317005}
   - component: {fileID: 5338053885047962398}
-  - component: {fileID: 460076724764793810}
   - component: {fileID: -4062984253328674984}
   - component: {fileID: 9156772115664356770}
+  - component: {fileID: 4162643024311861122}
   m_Layer: 0
   m_Name: Celery
   m_TagString: Tomato
@@ -664,7 +664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5514735238627320945}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.05895285, y: -0.00067818, z: -0.0114830015, w: 0.9981946}
+  m_LocalRotation: {x: -0.01148141, y: 0.9981944, z: 0.058954045, w: 0.0006780999}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
@@ -677,7 +677,7 @@ Transform:
   - {fileID: 6268093247748792525}
   - {fileID: 2248285892334874222}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -6.76, y: 0, z: -1.318}
+  m_LocalEulerAnglesHint: {x: -6.76, y: 180, z: -1.318}
 --- !u!54 &7835832326121560013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -908,31 +908,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f74674ac9197f4fae60066abe7fbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   speed: 0.9
   BodyTimer: 3
   IsDead: 0
---- !u!65 &460076724764793810
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514735238627320945}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &-4062984253328674984
 AudioSource:
   m_ObjectHideFlags: 0
@@ -951,7 +929,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 54
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -989,7 +967,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1053,6 +1031,29 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d86227eab2ac48f4e9f06a8c2edd5a61, type: 3}
   - {fileID: 8300000, guid: 13f921aea4ebe0b438228aa3ac3ec251, type: 3}
   - {fileID: 8300000, guid: 4065db384df91734e9e00eefd743c4c3, type: 3}
+--- !u!136 &4162643024311861122
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5514735238627320945}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0125
+  m_Height: 0.05
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.002, z: 0.0125}
 --- !u!1 &5567636837378860438
 GameObject:
   m_ObjectHideFlags: 0
