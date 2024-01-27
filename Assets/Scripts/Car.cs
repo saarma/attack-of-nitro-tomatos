@@ -113,9 +113,11 @@ public class Car : MonoBehaviour
         }
 
         //For debugging
+        /*
         if(Input.GetKeyDown(KeyCode.C)) {
             IncreaseEnemyHitCounter();
         }
+        */
     }
 
     void IncreaseEnemyHitCounter() {
