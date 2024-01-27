@@ -48,6 +48,8 @@ public class Car : MonoBehaviour
 
         // forward
         this.transform.Translate(Vector3.forward * Velocity * Time.deltaTime);
+
+        SetCountText();
     }
 
     void CheckInput()
@@ -92,7 +94,10 @@ public class Car : MonoBehaviour
     }
 
     void SetCountText() 
-    {
-        countText.text =  "Tomatoes splattered: " + enemyHitCounter.ToString();
+    { 
+        if (countText != null)
+        {
+            countText.text = "Tomatoes splattered: " + enemyHitCounter.ToString();
+        }
     }
 }

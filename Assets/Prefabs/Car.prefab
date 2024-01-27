@@ -178,6 +178,7 @@ MonoBehaviour:
   Velocity: 4
   VelocityStep: 1
   RotateSpeed: 80
+  countText: {fileID: 0}
 --- !u!82 &8497968598446339617
 AudioSource:
   m_ObjectHideFlags: 0
