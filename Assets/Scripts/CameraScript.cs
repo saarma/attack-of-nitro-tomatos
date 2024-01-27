@@ -37,7 +37,7 @@ public class CameraScript : MonoBehaviour
                 this.camera.transform.rotation = Quaternion.AngleAxis(y, Vector3.up);
             } else {
                 this.camera.transform.position = cameraPosition2Target.transform.position;
-                float y = 20f;
+                float y = 30f;
                 this.camera.transform.rotation = Quaternion.AngleAxis(y, Vector3.up);
             }
         }
