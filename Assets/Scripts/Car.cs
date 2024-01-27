@@ -56,7 +56,7 @@ public class Car : MonoBehaviour
 
             var enemy = other.gameObject;
             var enemyDiePosition = enemy.transform.position;
-            enemy.SetActive(false);
+            //enemy.SetActive(false);
 
             IncreaseEnemyHitCounter();
 
