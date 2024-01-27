@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject player;
+    private GameObject player;
     public float speed;
     public float BodyTimer = 3f;
     public bool IsDead = false;
@@ -38,15 +38,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void KillTomato()
     {
-        if (other.gameObject.CompareTag("Car"))
-        {
-            this.GetComponent<Collider>().enabled = false;
+        IsDead = true;
+        this.GetComponent<Collider>().enabled = false;
 
-            var oldScale = this.GetComponent<Transform>().localScale;
-            this.GetComponent<Transform>().localScale = new Vector3(oldScale.x, 5, oldScale.z);
-            IsDead = true;
-        }
+        var oldScale = this.GetComponent<Transform>().localScale;
+        this.GetComponent<Transform>().localScale = new Vector3(oldScale.x, 5, oldScale.z);
     }
 }

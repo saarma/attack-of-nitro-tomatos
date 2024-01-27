@@ -50,22 +50,24 @@ public class Car : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         //Debug.Log(other);
+        if (other.gameObject.CompareTag("Tomato") && !other.GetComponent<Enemy>().IsDead)
+        {
+            other.GetComponent<Enemy>().KillTomato();
+            //Debug.Log("TOMATO IS MURDERED!");
 
-        if(other.gameObject.CompareTag("Tomato")) {
-            //Debug.Log("Hit tomato!");
-
-            var enemy = other.gameObject;
-            var enemyDiePosition = enemy.transform.position;
+            //var enemy = other.gameObject;
+            //var enemyDiePosition = enemy.transform.position;
             //enemy.SetActive(false);
 
             IncreaseEnemyHitCounter();
 
             //Log enemy die position
-            Debug.Log("enemy die position x: " + enemyDiePosition.x);
-            Debug.Log("enemy die position y: " + enemyDiePosition.y);
-            Debug.Log("enemy die position z: " + enemyDiePosition.z);
+            //Debug.Log("enemy die position x: " + enemyDiePosition.x);
+            //Debug.Log("enemy die position y: " + enemyDiePosition.y);
+            //Debug.Log("enemy die position z: " + enemyDiePosition.z);
 
-            if(waveSpawner != null) {
+            if (waveSpawner != null)
+            {
                 waveSpawner.GetCurrentWave().enemiesLeft--;
             }
         }
