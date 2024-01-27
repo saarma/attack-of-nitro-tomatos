@@ -14,6 +14,9 @@ public class Car : MonoBehaviour
     [SerializeField]
     public float RotateSpeed = 80f;
 
+    //charging
+    [SerializeField]
+    private float chargeModifier = 1.5f;
     private bool charging = false;
 
     private float originalVelocity;
@@ -37,19 +40,13 @@ public class Car : MonoBehaviour
     {
         CheckInput();
 
-        if(charging)
-        {
-            Velocity *= 1.5f;
-            charging = false;
-        } else
-        {
-            Velocity = originalVelocity;
-        }
-
-        // forward
-        this.transform.Translate(Vector3.forward * Velocity * Time.deltaTime);
+        GoForward();
 
         SetCountText();
+    }
+
+    void GoForward() {
+        this.transform.Translate(Vector3.forward * Velocity * Time.deltaTime);
     }
 
     void CheckInput()
@@ -83,13 +80,25 @@ public class Car : MonoBehaviour
             this.transform.position = originalPosition;
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            charging = true;
+            charging = !charging;
+            ChangeChargeSpeed();
         }
 
-        if(Input.GetKey(KeyCode.C)) {
+        //For debugging
+        if(Input.GetKeyDown(KeyCode.C)) {
             enemyHitCounter++;
+        }
+    }
+
+    void ChangeChargeSpeed() {
+        if(charging)
+        {
+            Velocity *= chargeModifier;
+        } else
+        {
+            Velocity = originalVelocity;
         }
     }
 
