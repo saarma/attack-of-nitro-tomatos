@@ -6,10 +6,13 @@ using TMPro;
 public class Car : MonoBehaviour
 {
     [SerializeField]
-    public float Velocity = 50f;
+    public float Velocity = 4f;
 
     [SerializeField]
-    public float RotateSpeed = 100f;
+    public float VelocityStep = 1f;
+
+    [SerializeField]
+    public float RotateSpeed = 80f;
 
     private bool charging = false;
 
@@ -23,9 +26,6 @@ public class Car : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Velocity = 4f;
-        RotateSpeed = 80f;
-
         originalPosition = this.transform.position;
         originalVelocity = Velocity;
 
@@ -35,6 +35,8 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckInput();
+
         if(charging)
         {
             Velocity *= 1.5f;
@@ -44,6 +46,12 @@ public class Car : MonoBehaviour
             Velocity = originalVelocity;
         }
 
+        // forward
+        this.transform.Translate(Vector3.forward * Velocity * Time.deltaTime);
+    }
+
+    void CheckInput()
+    {
         if (Input.GetKey(KeyCode.A))
         {
             this.transform.Rotate(Vector3.down * RotateSpeed * Time.deltaTime);
@@ -51,7 +59,15 @@ public class Car : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            this.transform.Translate(Vector3.forward * Velocity * Time.deltaTime);
+            Velocity += VelocityStep;
+            //this.transform.Translate(Vector3.forward * Velocity * Time.deltaTime);
+            //this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, Velocity));
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            Velocity -= VelocityStep;
+            //this.transform.Translate(Vector3.forward * Velocity * Time.deltaTime);
             //this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, Velocity));
         }
 
@@ -60,11 +76,12 @@ public class Car : MonoBehaviour
             this.transform.Rotate(Vector3.up * RotateSpeed * Time.deltaTime);
         }
 
-        if(Input.GetKey(KeyCode.R)) {
+        if (Input.GetKey(KeyCode.R))
+        {
             this.transform.position = originalPosition;
         }
 
-        if(Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             charging = true;
         }
