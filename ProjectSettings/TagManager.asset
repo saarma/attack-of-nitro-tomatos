@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tomato
   - WaveSpawner
+  - Enemy
   layers:
   - Default
   - TransparentFX
