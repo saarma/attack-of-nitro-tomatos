@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject tomato;
-    float spawnTimer = 1f;
+    float spawnTimer = 3f;
     float timer = 0f;
     int waveNumber = 0;
 
