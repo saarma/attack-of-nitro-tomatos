@@ -3674,7 +3674,7 @@ MonoBehaviour:
   leftFist: {fileID: 8012945723028467760}
   rightFist: {fileID: 6571732962974939885}
   enemyTag: Enemy
-  speed: 30
+  speed: 25
   timeAtTarget: 0.2
   minRange: {x: -11.56, y: -0.47, z: -2.31}
   maxRange: {x: -4.98, y: 4.03, z: 4.83}
@@ -3769,9 +3769,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!33 &8252086980305511380
 MeshFilter:
@@ -3839,9 +3839,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!33 &8354790627890618368
 MeshFilter:
@@ -3969,9 +3969,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!4 &8836666736872018234
 Transform:
@@ -4086,7 +4086,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9171957649279669066}
   serializedVersion: 4
-  m_Mass: 999
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -4103,7 +4103,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &9171957649279669069
 MonoBehaviour:
