@@ -30,6 +30,11 @@ public class RandomSound : MonoBehaviour
 
     void SpawnSound()
     {
+        if (spawnSounds.Length == 0)
+        {
+
+        }
+
         AudioClip clip = spawnSounds[UnityEngine.Random.Range(0, spawnSounds.Length-1)];
         myAudioSource.PlayOneShot(clip);
     }
