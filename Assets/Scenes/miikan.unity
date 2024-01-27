@@ -513,6 +513,10 @@ PrefabInstance:
       propertyPath: countText
       value: 
       objectReference: {fileID: 1999921528}
+    - target: {fileID: 8119106784723972, guid: e63cfd5afd1509d4da160ebbc70ef49e, type: 3}
+      propertyPath: chargeModifier
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4572688152902997789, guid: e63cfd5afd1509d4da160ebbc70ef49e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2135,7 +2139,7 @@ Transform:
   m_GameObject: {fileID: 1331845211}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.619, z: -10}
+  m_LocalPosition: {x: 0, y: 2.619, z: -13.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
