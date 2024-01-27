@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject player;
+    private GameObject player;
     public float speed;
     public float BodyTimer = 3f;
     public bool IsDead = false;
@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Car"))
+        if (other.gameObject.CompareTag("Car") && ! IsDead)
         {
             this.GetComponent<Collider>().enabled = false;
 
