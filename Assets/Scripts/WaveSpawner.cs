@@ -35,6 +35,11 @@ public class WaveSpawner : MonoBehaviour
     private float _creditsTimer = 6.66f; //seconds
     public CreditTextsController creditTextsController;
 
+    public AudioClip Intro;
+    public AudioClip Music;
+
+    private bool _isIntroPlaying = false;
+
     void Start()
     {
         var rb = Booth.GetComponent<Rigidbody>();
@@ -102,7 +107,16 @@ public class WaveSpawner : MonoBehaviour
             }
 
             if(_creditsTimer <= 0f) {
-                StartCredits();
+                if (! _isIntroPlaying)
+                {
+                    AnnounceDJ();
+                } 
+                
+                if (_isIntroPlaying && !Booth.GetComponent<AudioSource>().isPlaying)
+                {
+                    Booth.GetComponent<AudioSource>().PlayOneShot(Music);
+                    StartCredits();
+                }
             }
         }
 
@@ -120,19 +134,23 @@ public class WaveSpawner : MonoBehaviour
     }
 
     private void StartCredits() {
-        //VICTORY!!
         ReleaseTheBooth();
-
         KillAllTheTomatoes();
+        _musicIsPlayed = true;
+        car.SetActive(false);
+    }
+
+    private void AnnounceDJ() {
+        _isIntroPlaying = true;
+        endCreditsPanel.SetActive(true);
+        
+        Booth.GetComponent<AudioSource>().PlayOneShot(Intro);
     }
 
 
     private void GoToEnd() {
         currentWaveIndex = waves.Length - 1;
         _creditTimerEnabled = true;
-
-        endCreditsPanel.SetActive(true);
-        car.SetActive(false);
     }
 
     private void GoToNextWave() {
@@ -193,10 +211,17 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
+    private bool _musicIsPlayed = false;
 
     private void ReleaseTheBooth() {
-        var rb = Booth.GetComponent<Rigidbody>();
-        rb.constraints = RigidbodyConstraints.None;
+        //activate music
+        
+        if(!_musicIsPlayed) {
+
+            _musicIsPlayed = true;
+            var rb = Booth.GetComponent<Rigidbody>();
+            rb.constraints = RigidbodyConstraints.None;
+        }
     }
 
     private void KillAllTheTomatoes() {
@@ -204,15 +229,10 @@ public class WaveSpawner : MonoBehaviour
          GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Tomato");
 
          foreach(GameObject obj in taggedObjects) {
+
+            obj.GetComponent<AudioSource>().mute = true;
             obj.GetComponent<Enemy>().KillTomato();
          }
-         /*
-         taggedObjects.Where(obj => obj != null).ToList().ForEach(obj =>
-        {
-            // Call your method for each GameObject here
-            obj.KillTomato();
-        });
-        */
     }
    
 

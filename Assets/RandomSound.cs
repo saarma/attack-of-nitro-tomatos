@@ -9,6 +9,8 @@ public class RandomSound : MonoBehaviour
     
     AudioSource myAudioSource;
 
+    private bool _isDeathSoundPlayed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,11 @@ public class RandomSound : MonoBehaviour
 
     void SpawnSound()
     {
+        if (_isDeathSoundPlayed)
+        {
+            return;
+        }
+
         if (spawnSounds.Length == 0)
         {
 
@@ -37,6 +44,7 @@ public class RandomSound : MonoBehaviour
 
         AudioClip clip = spawnSounds[UnityEngine.Random.Range(0, spawnSounds.Length-1)];
         myAudioSource.PlayOneShot(clip);
+        _isDeathSoundPlayed = true;
     }
 
     void DeathSound()
