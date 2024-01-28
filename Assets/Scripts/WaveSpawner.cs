@@ -24,7 +24,7 @@ public class WaveSpawner : MonoBehaviour
    /// </summary>
     private bool _creditTimerEnabled = false;
 
-    private float _creditsTimer = 5.0f; //5 seconds
+    private float _creditsTimer = 6.66f; //seconds
 
     void Start()
     {
@@ -37,7 +37,7 @@ public class WaveSpawner : MonoBehaviour
 
         //set first wave
         CurrentWave = waves[0];
-        waveCounter.text = "Wave: " + (currentWaveIndex + 1);
+        ShowWaveCount();
     }
 
     public Wave GetCurrentWave() {
@@ -53,7 +53,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (currentWaveIndex >= waves.Length)
         {
-            Debug.Log("Every tomato is dead");
+            //Debug.Log("Every tomato is dead");
             return;
         }
 
@@ -81,18 +81,31 @@ public class WaveSpawner : MonoBehaviour
                 GoToNextWave();
             }
 
-            waveCounter.text = "Wave: " + (currentWaveIndex + 1);
+            ShowWaveCount();
         } 
 
         if(_creditTimerEnabled) {
-            _creditsTimer -= Time.deltaTime;
+
+            if(_creditsTimer >= 0) {
+                _creditsTimer -= Time.deltaTime;
+            }
 
             if(_creditsTimer <= 0f) {
-                //PUDOTA DJ-pöytä
                 StartCredits();
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            GoToEnd();
+            ShowWaveCount();
+        }
+
+    }
+
+    private void ShowWaveCount() {
+        //TODO: infinite wave
+        waveCounter.text = "Wave: " + (currentWaveIndex + 1);
     }
 
     private void StartCredits() {
@@ -103,6 +116,7 @@ public class WaveSpawner : MonoBehaviour
 
 
     private void GoToEnd() {
+        currentWaveIndex = waves.Length - 1;
         _creditTimerEnabled = true;
     }
 
@@ -145,7 +159,7 @@ public class WaveSpawner : MonoBehaviour
             GameObject randomGameObject = spawnPoints[randomIndex];
 
             // Now you can use the random GameObject as needed
-            Debug.Log("Random GameObject: " + randomGameObject.name);
+            //Debug.Log("Random GameObject: " + randomGameObject.name);
 
             return randomGameObject;
         }
