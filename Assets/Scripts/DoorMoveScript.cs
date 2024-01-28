@@ -72,4 +72,12 @@ public class DoorMoveScript : MonoBehaviour
     private void CloseRightDoor(float speed) {
         DoorRight.transform.position = Vector3.MoveTowards(DoorRight.transform.position, RightDoorClosePosition, speed);
     }
+
+    public void OpenTheDoors() {
+        Opening = true;
+    }
+
+    public void CloseTheDoors() {
+        Opening = false;
+    }
 }

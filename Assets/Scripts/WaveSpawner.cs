@@ -17,8 +17,16 @@ public class WaveSpawner : MonoBehaviour
     public int currentWaveIndex = 0;
     private bool readyToCountDown;
 
+    [SerializeField] GameObject scriptHolder;
+
+   /// <summary>
+   /// Onko peli voitettu?
+   /// </summary>
+    private bool GameIsAtTheEnd = false;
+
     void Start()
     {
+
         readyToCountDown = true;
         for (int i = 0; i < waves.Length; i++)
         {
@@ -65,21 +73,35 @@ public class WaveSpawner : MonoBehaviour
             readyToCountDown = true;
             lastWaveIndex = currentWaveIndex;
 
-            GoToNextWave();
+            if(waves[currentWaveIndex].FinalWave) {
+                GoToNextWave();
+                GoToEnd();
+            } else {
+                GoToNextWave();
+            }
 
             waveCounter.text = "Wave: " + (currentWaveIndex + 1);
         }      
 
     }
 
+    private void GoToEnd() {
+        //VICTORY!!
+        //TODO: Activate pöydän tippuminen
+        GameIsAtTheEnd = true;
+    }
+
     private void GoToNextWave() {
         if(currentWaveIndex < waves.Length - 1) {
             currentWaveIndex++;
+
+            scriptHolder.GetComponent<DoorMoveScript>().CloseTheDoors();
         }
     }
 
     private IEnumerator SpawnWave()
     {
+        scriptHolder.GetComponent<DoorMoveScript>().OpenTheDoors();
         //Debug.Log("Spawn Wave");
         //Debug.Log(currentWaveIndex);
         if (currentWaveIndex < waves.Length)
