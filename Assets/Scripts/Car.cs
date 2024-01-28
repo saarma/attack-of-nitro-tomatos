@@ -103,7 +103,29 @@ public class Car : MonoBehaviour
         this.transform.Translate(Vector3.forward * Velocity * Time.deltaTime);
     }
 
-    void CheckInput()
+    public void leftTurn()
+    {
+        this.transform.Rotate(Vector3.down * RotateSpeed / 4);
+    }
+    
+    public void rightTurn()
+    {
+        this.transform.Rotate(Vector3.up * RotateSpeed / 4);
+    }
+
+    public void accelerate()
+    {
+        Velocity += VelocityStep;
+    }
+
+    public void decelerate()
+    {
+        Velocity -= VelocityStep;
+    }
+
+
+
+void CheckInput()
     {
         if (Input.GetKey(KeyCode.A))
         {
