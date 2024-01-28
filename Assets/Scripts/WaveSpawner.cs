@@ -22,7 +22,9 @@ public class WaveSpawner : MonoBehaviour
    /// <summary>
    /// Onko peli voitettu?
    /// </summary>
-    private bool GameIsAtTheEnd = false;
+    private bool _creditTimerEnabled = false;
+
+    private float _creditsTimer = 5.0f; //5 seconds
 
     void Start()
     {
@@ -67,7 +69,6 @@ public class WaveSpawner : MonoBehaviour
             StartCoroutine(SpawnWave());
         }        
         
-
         if (waves[currentWaveIndex].enemiesLeft <= 0)
         {
             readyToCountDown = true;
@@ -81,14 +82,28 @@ public class WaveSpawner : MonoBehaviour
             }
 
             waveCounter.text = "Wave: " + (currentWaveIndex + 1);
-        }      
+        } 
+
+        if(_creditTimerEnabled) {
+            _creditsTimer -= Time.deltaTime;
+
+            if(_creditsTimer <= 0f) {
+                //PUDOTA DJ-pöytä
+                StartCredits();
+            }
+        }
 
     }
 
-    private void GoToEnd() {
+    private void StartCredits() {
         //VICTORY!!
-        //TODO: Activate pöydän tippuminen
-        GameIsAtTheEnd = true;
+        //TODO: Activate pöydän tippuminen, kutsu erjan scriptiä
+        Debug.Log("VICTORY, DJ released");
+    }
+
+
+    private void GoToEnd() {
+        _creditTimerEnabled = true;
     }
 
     private void GoToNextWave() {
