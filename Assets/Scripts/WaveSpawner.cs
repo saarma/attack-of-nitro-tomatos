@@ -91,8 +91,7 @@ public class WaveSpawner : MonoBehaviour
             lastWaveIndex = currentWaveIndex;
 
             if(waves[currentWaveIndex].FinalWave) {
-                GoToNextWave();
-                GoToEnd();
+                GoToFinalWaveAndEnableCreditTimer();
             } else {
                 GoToNextWave();
             }
@@ -122,7 +121,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            GoToEnd();
+            GoToFinalWaveAndEnableCreditTimer();
             ShowWaveCount();
         }
 
@@ -138,6 +137,9 @@ public class WaveSpawner : MonoBehaviour
         KillAllTheTomatoes();
         _musicIsPlayed = true;
         car.SetActive(false);
+
+
+ShowCreditTexts();
     }
 
     private void AnnounceDJ() {
@@ -148,7 +150,7 @@ public class WaveSpawner : MonoBehaviour
     }
 
 
-    private void GoToEnd() {
+    private void GoToFinalWaveAndEnableCreditTimer() {
         currentWaveIndex = waves.Length - 1;
         _creditTimerEnabled = true;
     }
@@ -175,7 +177,7 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int i = 0; i < waves[currentWaveIndex].tomatoes.Length; i++)
             {
-                if(_creditsTimer <= 0f) {
+                if(_isIntroPlaying) {
                     continue;
                 }
                 var spawnPoint = GetRandomSpawnPoint();
