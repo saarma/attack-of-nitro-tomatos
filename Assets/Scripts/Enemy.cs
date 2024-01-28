@@ -10,10 +10,12 @@ public class Enemy : MonoBehaviour
 
     private int HP = 1;
     private int AttackPower = 1;
+    private Vector3 _originalPosition;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player"); 
+        player = GameObject.FindGameObjectWithTag("Player");
+        _originalPosition = this.transform.position;
     }
 
     // Update is called once per frame
@@ -36,6 +38,11 @@ public class Enemy : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
+    }
+
+    public void SetOriginalPosition()
+    {
+        this.transform.position = _originalPosition;
     }
 
     public void KillTomato()

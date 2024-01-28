@@ -136,6 +136,12 @@ public class Car : MonoBehaviour
         }
     }
 
+    public void SetOriginalPosition()
+    {
+        this.transform.position = originalPosition;
+        Velocity = originalVelocity;
+    }
+
     void SetCountText() 
     { 
         if (countText != null)
