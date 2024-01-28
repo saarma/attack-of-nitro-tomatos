@@ -880,6 +880,475 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd1c1bfa60aa34478052278898bb40a, type: 3}
+--- !u!1 &138946592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 138946593}
+  - component: {fileID: 138946595}
+  - component: {fileID: 138946594}
+  m_Layer: 5
+  m_Name: Texts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &138946593
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138946592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1020501292}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 52, y: -5746}
+  m_SizeDelta: {x: -227.0249, y: 11057.438}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &138946594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138946592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 'Attack of Nitro Tomato
+
+    
+
+    CREDITS
+
+    
+
+    Produced by
+
+    mikeliz89
+    ... producer
+
+    saarma ... line producer
+
+    Embraze ... executive producer:
+    Comedy Central
+
+    Adara ... co-producer assistan manager
+
+    mikeliz89 ...
+    producer manager
+
+    saarma ... executive producer
+
+    Embraze ... co-producer
+
+    Adara
+    ... executive producer financial partment
+
+    mikeliz89 ... co-producer
+
+    
+
+    Cinematography
+    by
+
+    saarma
+
+    
+
+    Editing by
+
+    Embraze
+
+    
+
+    Casting By
+
+    Adara
+
+    mikeliz89
+
+    saarma
+
+    
+
+    Production
+    Design by
+
+    saarma
+
+    
+
+    Costume Design by
+
+    Embraze
+
+    
+
+    Production
+    Management
+
+    mikeliz89 ... assistant production manager
+
+    saarma ...
+    unit production manager
+
+    Embraze ... production manager
+
+    Embraze ...
+    post-production supervisor
+
+    
+
+    Second Unit Director or Assistant Director
+
+    Adara
+    ... third assistant director
+
+    mikeliz89 ... second assistant director
+
+    saarma
+    ... extras coordinator / third assistant director: additional crew
+
+    Tapio
+    ... first assistant
+
+    Embraze ... assistant director: additional crew (as
+    Noemie Vilchez)
+
+    
+
+    Art Department
+
+    Adara ... assistant: art department
+
+    mikeliz89
+    ... assistant: art department
+
+    Tapio ... special effects
+
+    Embraze ...
+    special props
+
+    Adara ... art department
+
+    mikeliz89 ... props
+
+    saarma
+    ... set dresser
+
+    Adara ... concept artist
+
+    Embraze ... production art
+    department
+
+    Adara ... production art department
+
+    mikeliz89 ... set
+    assistant
+
+    
+
+    Sound Department
+
+    saarma ... foley editor / foley
+    recordist
+
+    Adara ... sound effects editor
+
+    Embraze ... assistant sound
+    recordist
+
+    Adara ... dialogue editor
+
+    mikeliz89 ... sound
+
+    saarma
+    ... foley artist
+
+    mikeliz89 ... sound mixer
+
+    Embraze ... assistant
+    sound
+
+    Adara ... re-recording mixer / supervising sound editor
+
+    
+
+    Special
+    Effects by
+
+    mikeliz89 ... special effects technician
+
+    saarma ... special
+    effects technician
+
+    Tapio ... special effects technician
+
+    Embraze ...
+    special effects technician
+
+    Adara ... senior special effects technician
+
+    mikeliz89
+    ... special effects coordinator
+
+    saarma ... special effects supervisor
+
+    
+
+    Visual
+    Effects by
+
+    Tapio ... visual effects artist
+
+    Embraze ... visual effects
+    artist
+
+    Adara ... visual effects artist
+
+    mikeliz89 ... visual effects
+    artist
+
+    saarma ... visual effects artist
+
+    Tapio ... visual effects
+    artist (as Martijn van Kuilenburg)
+
+    Embraze ... visual effects artist
+
+    
+
+    Stunts
+
+    Adara
+    ... stunts
+
+    mikeliz89 ... stunt coordinator
+
+    saarma ... stunts
+
+    Embraze
+    ... stunts
+
+    Adara ... stunts
+
+    mikeliz89 ... stunts
+
+    saarma ...
+    stunt double: Tim Haars/Lars Boekhorst
+
+    Embraze ... stunts
+
+    
+
+    Camera
+    and Electrical Department
+
+    Adara ... still photographer
+
+    mikeliz89
+    ... focus puller
+
+    saarma ... data handler
+
+    Tapio ... lighting technician
+
+    Embraze
+    ... focus puller: a camera
+
+    Adara ... gaffer
+
+    mikeliz89 ... steadicam
+    operator
+
+    saarma ... gaffer
+
+    mikeliz89 ... camera assista
+
+    mikeliz89
+    ... assistant lighting technician
+
+    saarma ... electrician
+
+    Embraze
+    ... grip assistant
+
+    
+
+    Casting Department
+
+    mikeliz89 ... casting
+
+    saarma
+    ... casting
+
+    Tapio ... casting
+
+    Embraze ... casting
+
+    Adara ...
+    casting
+
+    
+
+    Costume and Wardrobe Department
+
+    mikeliz89 ... assistant
+    costume designer
+
+    saarma ... costume design
+
+    Tapio ... military costumer
+
+    Embraze
+    ... costume on set
+
+    
+
+    Editorial Department
+
+    Adara ... trailer
+    editor
+
+    mikeliz89 ... colorist
+
+    saarma ... first assistant editor
+
+    
+
+    Location
+    Management
+
+    Tapio ... location manager
+
+    Embraze ... location scout:
+    additional crew
+
+    Adara ... assistant location manager
+
+    mikeliz89 ...
+    location scout
+
+    saarma ... location manager
+
+    Tapio ... assistant location
+    manager: additional crew
+
+    Embraze ... location scout: additional crew
+
+    Adara
+    ... assistant location manager: additional crew
+
+    
+
+    Music Department
+
+    mikeliz89
+    ... composer: additional music
+
+    saarma ... composer: additional music
+
+    Tapio
+    ... music clearances
+
+    Embraze ... music clearances
+
+    Adara ... composer:
+    additional music
+
+    
+
+    Transportation Department
+
+    mikeliz89 ... car
+    handling and transport
+
+    saarma ... car handling and transport: additional
+    crew
+
+    Tapio ... car handling and transport: additional crew
+
+    Embraze
+    ... picture vehicle coordinator: Car Casting Holland
+
+    Adara ... car handling
+    and transport: additional crew
+
+    
+
+    Additional Crew
+
+    mikeliz89 ...
+    assistant production leader
+
+    saarma ... caterer: additional crew, Salie
+    Catering (as Sanne Bach)
+
+    Embraze ... animal handler: cow (as Frans Janter
+    Beek)
+
+    Adara ... catering assistant: additional crew
+
+    ... and so on
+    for the remaining crew members, with their names replaced by mikeliz89, saarma,
+    Tapio, Embraze, and Adara in a random order.
+
+    
+
+    Thanks
+
+    mikeliz89
+    ... the producers wish to thank
+
+    saarma ... special thanks
+
+    
+
+'
+--- !u!222 &138946595
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138946592}
+  m_CullTransparentMesh: 1
 --- !u!1001 &143997411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2000,6 +2469,7 @@ RectTransform:
   - {fileID: 1738328226}
   - {fileID: 1365564243}
   - {fileID: 1750271886}
+  - {fileID: 560673757}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2766,6 +3236,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &560673756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560673757}
+  - component: {fileID: 560673758}
+  m_Layer: 0
+  m_Name: CreditTextsController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560673757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560673756}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 125.07315, y: -166.57535, z: -28.868856}
+  m_LocalScale: {x: 0.7272727, y: 0.7272727, z: 0.7272727}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1020501292}
+  m_Father: {fileID: 406292413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &560673758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560673756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be38e761ae238a344bed37da48dc0045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCreditsScrolling: 0
+  creditTexts: {fileID: 138946594}
+  creditTextsBackround: {fileID: 1020501293}
+  rectTransform: {fileID: 138946593}
+  moveSpeedAmount: 200
 --- !u!1001 &580208098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4122,7 +4642,7 @@ MonoBehaviour:
   scriptHolder: {fileID: 1499824488}
   Intro: {fileID: 8300000, guid: 1d8d5dee5427ead49bab6df4a87f86fa, type: 3}
   Music: {fileID: 8300000, guid: 0f2f590edcfd2b14e85155906f8fce24, type: 3}
---- !u!1001 &1015147234
+  creditTextsController: {fileID: 560673758}
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -4191,6 +4711,82 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8c83c417104d75459226dd80248bfe2, type: 3}
+--- !u!1 &1020501291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1020501292}
+  - component: {fileID: 1020501294}
+  - component: {fileID: 1020501293}
+  m_Layer: 5
+  m_Name: CreditTexts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1020501292
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020501291}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 39.69468}
+  m_LocalScale: {x: 1.3750001, y: 1.3750001, z: 1.3750001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 138946593}
+  m_Father: {fileID: 560673757}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -171.97557, y: 229.04109}
+  m_SizeDelta: {x: 800, y: 373.81818}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1020501293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020501291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 12
+--- !u!222 &1020501294
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020501291}
+  m_CullTransparentMesh: 1
 --- !u!1 &1030157665
 GameObject:
   m_ObjectHideFlags: 0
