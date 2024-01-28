@@ -113,7 +113,7 @@ public class WaveSpawner : MonoBehaviour
                 
                 if (_isIntroPlaying && !Booth.GetComponent<AudioSource>().isPlaying)
                 {
-                    Booth.GetComponent<AudioSource>().PlayOneShot(Music, 0.7f);
+                    Booth.GetComponent<AudioSource>().PlayOneShot(Music, 0.3f);
                     StartCredits();
                 }
             }
