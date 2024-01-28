@@ -113,7 +113,7 @@ public class WaveSpawner : MonoBehaviour
                 
                 if (_isIntroPlaying && !Booth.GetComponent<AudioSource>().isPlaying)
                 {
-                    Booth.GetComponent<AudioSource>().PlayOneShot(Music);
+                    Booth.GetComponent<AudioSource>().PlayOneShot(Music, 0.7f);
                     StartCredits();
                 }
             }
@@ -138,8 +138,7 @@ public class WaveSpawner : MonoBehaviour
         _musicIsPlayed = true;
         car.SetActive(false);
 
-
-ShowCreditTexts();
+        ShowCreditTexts();
     }
 
     private void AnnounceDJ() {
@@ -147,8 +146,9 @@ ShowCreditTexts();
         endCreditsPanel.SetActive(true);
         
         Booth.GetComponent<AudioSource>().PlayOneShot(Intro);
-    }
 
+        MuteAllTomatos();
+    }
 
     private void GoToFinalWaveAndEnableCreditTimer() {
         currentWaveIndex = waves.Length - 1;
@@ -223,6 +223,16 @@ ShowCreditTexts();
             _musicIsPlayed = true;
             var rb = Booth.GetComponent<Rigidbody>();
             rb.constraints = RigidbodyConstraints.None;
+        }
+    }
+
+    private void MuteAllTomatos()
+    {
+        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Tomato");
+
+        foreach (GameObject obj in taggedObjects)
+        {
+            obj.GetComponent<AudioSource>().mute = true;
         }
     }
 
