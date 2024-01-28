@@ -52,6 +52,18 @@ public class Car : MonoBehaviour
         //Debug.Log(other);
         if (other.gameObject.CompareTag("Tomato") && !other.GetComponent<Enemy>().IsDead)
         {
+            // Create multiple more splashes random sizes and position variations
+            for (int i = 0; i < 26; i++)
+            {
+                GameObject splash = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                splash.AddComponent<Rigidbody>();
+                splash.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f, 2f), Random.Range(-1f, 2f), Random.Range(1f, 4f)) * 100);
+                splash.transform.position = transform.position + new Vector3(Random.Range(-2.6f, 2.6f), Random.Range(-2.6f, 2.6f), Random.Range(0f, 3.0f));
+                splash.transform.localScale = new Vector3(Random.Range(0.05f, 0.5f), Random.Range(0.05f, 0.5f), Random.Range(0.05f, 0.5f));
+                splash.GetComponent<Renderer>().material.color = Color.red;
+                Destroy(splash, Random.Range(1f, 2f));
+            }
+
             other.GetComponent<Enemy>().KillTomato();
             //Debug.Log("TOMATO IS MURDERED!");
 
