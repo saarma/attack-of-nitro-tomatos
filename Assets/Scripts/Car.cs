@@ -49,39 +49,53 @@ public class Car : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        //Debug.Log(other);
-        if (other.gameObject.CompareTag("Tomato") && !other.GetComponent<Enemy>().IsDead)
+        if (!other.gameObject.CompareTag("Tomato"))
         {
-            // Create multiple more splashes random sizes and position variations
-            for (int i = 0; i < 26; i++)
-            {
-                GameObject splash = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                splash.AddComponent<Rigidbody>();
-                splash.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f, 2f), Random.Range(-1f, 2f), Random.Range(1f, 4f)) * 100);
-                splash.transform.position = transform.position + new Vector3(Random.Range(-2.6f, 2.6f), Random.Range(-2.6f, 2.6f), Random.Range(0f, 3.0f));
-                splash.transform.localScale = new Vector3(Random.Range(0.05f, 0.5f), Random.Range(0.05f, 0.5f), Random.Range(0.05f, 0.5f));
-                splash.GetComponent<Renderer>().material.color = Color.red;
-                Destroy(splash, Random.Range(1f, 2f));
-            }
+            // Not a tomato
+            return;
+        }
 
-            other.GetComponent<Enemy>().KillTomato();
-            //Debug.Log("TOMATO IS MURDERED!");
+        if (other.GetComponent<Enemy>() == null)
+        {
+            // Not an enemy
+            return;
+        }
 
-            //var enemy = other.gameObject;
-            //var enemyDiePosition = enemy.transform.position;
-            //enemy.SetActive(false);
+        if (other.GetComponent<Enemy>().IsDead)
+        {
+            // Stop, already dead!
+            return;
+        }
 
-            IncreaseEnemyHitCounter();
+        // Create multiple more splashes random sizes and position variations
+        for (int i = 0; i < 26; i++)
+        {
+            GameObject splash = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            splash.AddComponent<Rigidbody>();
+            splash.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f, 2f), Random.Range(-1f, 2f), Random.Range(1f, 4f)) * 100);
+            splash.transform.position = transform.position + new Vector3(Random.Range(-2.6f, 2.6f), Random.Range(-2.6f, 2.6f), Random.Range(0f, 3.0f));
+            splash.transform.localScale = new Vector3(Random.Range(0.05f, 0.5f), Random.Range(0.05f, 0.5f), Random.Range(0.05f, 0.5f));
+            splash.GetComponent<Renderer>().material.color = Color.red;
+            Destroy(splash, Random.Range(1f, 2f));
+        }
 
-            //Log enemy die position
-            //Debug.Log("enemy die position x: " + enemyDiePosition.x);
-            //Debug.Log("enemy die position y: " + enemyDiePosition.y);
-            //Debug.Log("enemy die position z: " + enemyDiePosition.z);
+        other.GetComponent<Enemy>().KillTomato();
+        //Debug.Log("TOMATO IS MURDERED!");
 
-            if (waveSpawner != null)
-            {
-                waveSpawner.GetCurrentWave().enemiesLeft--;
-            }
+        //var enemy = other.gameObject;
+        //var enemyDiePosition = enemy.transform.position;
+        //enemy.SetActive(false);
+
+        IncreaseEnemyHitCounter();
+
+        //Log enemy die position
+        //Debug.Log("enemy die position x: " + enemyDiePosition.x);
+        //Debug.Log("enemy die position y: " + enemyDiePosition.y);
+        //Debug.Log("enemy die position z: " + enemyDiePosition.z);
+
+        if (waveSpawner != null)
+        {
+            waveSpawner.GetCurrentWave().enemiesLeft--;
         }
     }
 
