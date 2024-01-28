@@ -9,6 +9,9 @@ public class WaveSpawner : MonoBehaviour
 
     [SerializeField] private GameObject[] spawnPoints;
 
+    [SerializeField]
+    public GameObject Booth;
+
     private Wave CurrentWave;
 
     public TextMeshProUGUI waveCounter;
@@ -28,6 +31,8 @@ public class WaveSpawner : MonoBehaviour
 
     void Start()
     {
+        var rb = Booth.GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezeAll;
 
         readyToCountDown = true;
         for (int i = 0; i < waves.Length; i++)
@@ -123,7 +128,6 @@ public class WaveSpawner : MonoBehaviour
     private void GoToNextWave() {
         if(currentWaveIndex < waves.Length - 1) {
             currentWaveIndex++;
-
             scriptHolder.GetComponent<DoorMoveScript>().CloseTheDoors();
         }
     }
@@ -168,6 +172,13 @@ public class WaveSpawner : MonoBehaviour
             Debug.LogWarning("The spawnPoints is either null or empty.");
             return null;
         }
+    }
+
+
+    private void ReleaseTheBooth() {
+
+        var rb = Booth.GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.None;
     }
 
    
