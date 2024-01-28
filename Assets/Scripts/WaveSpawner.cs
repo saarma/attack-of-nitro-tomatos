@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class WaveSpawner : MonoBehaviour
     private Wave CurrentWave;
 
     public TextMeshProUGUI waveCounter;
+
+    public GameObject endCreditsPanel;
+
+    public GameObject car;
 
     private int lastWaveIndex = 0;
     public int currentWaveIndex = 0;
@@ -115,14 +120,18 @@ public class WaveSpawner : MonoBehaviour
 
     private void StartCredits() {
         //VICTORY!!
-        //TODO: Activate pöydän tippuminen, kutsu erjan scriptiä
-        Debug.Log("VICTORY, DJ released");
+        ReleaseTheBooth();
+
+        KillAllTheTomatoes();
     }
 
 
     private void GoToEnd() {
         currentWaveIndex = waves.Length - 1;
         _creditTimerEnabled = true;
+
+        endCreditsPanel.SetActive(true);
+        car.SetActive(false);
     }
 
     private void GoToNextWave() {
@@ -141,6 +150,9 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int i = 0; i < waves[currentWaveIndex].tomatoes.Length; i++)
             {
+                if(_creditsTimer <= 0f) {
+                    continue;
+                }
                 var spawnPoint = GetRandomSpawnPoint();
                 if(spawnPoint != null) {
                     Enemy enemy = Instantiate(waves[currentWaveIndex].tomatoes[i], spawnPoint.transform);
@@ -176,11 +188,25 @@ public class WaveSpawner : MonoBehaviour
 
 
     private void ReleaseTheBooth() {
-
         var rb = Booth.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.None;
     }
 
+    private void KillAllTheTomatoes() {
+        
+         GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Tomato");
+
+         foreach(GameObject obj in taggedObjects) {
+            obj.GetComponent<Enemy>().KillTomato();
+         }
+         /*
+         taggedObjects.Where(obj => obj != null).ToList().ForEach(obj =>
+        {
+            // Call your method for each GameObject here
+            obj.KillTomato();
+        });
+        */
+    }
    
 
 }
