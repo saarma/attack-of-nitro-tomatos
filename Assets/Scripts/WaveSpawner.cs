@@ -33,6 +33,7 @@ public class WaveSpawner : MonoBehaviour
     private bool _creditTimerEnabled = false;
 
     private float _creditsTimer = 6.66f; //seconds
+    public CreditTextsController creditTextsController;
 
     void Start()
     {
@@ -140,6 +141,12 @@ public class WaveSpawner : MonoBehaviour
             scriptHolder.GetComponent<DoorMoveScript>().CloseTheDoors();
         }
     }
+    
+    private void ShowCreditTexts()
+    {
+        creditTextsController.StartCreditTexts();
+    }
+
 
     private IEnumerator SpawnWave()
     {
