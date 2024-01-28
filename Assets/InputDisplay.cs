@@ -11,10 +11,15 @@ public class InputDisplay : MonoBehaviour
 
     public Queue<string> LatestInput;
 
+    private float _clearTimer;
+    public float ClearTime = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
         LatestInput = new Queue<string>();
+
+        _clearTimer = ClearTime;
     }
 
     // Update is called once per frame
@@ -25,6 +30,14 @@ public class InputDisplay : MonoBehaviour
         ReadInput();
 
         UpdateDisplay();
+
+        _clearTimer -= Time.deltaTime;
+
+        if (_clearTimer <= 0 && LatestInput.Count > 0)
+        {
+            LatestInput.Dequeue();
+            ResetTimer();
+        }
     }
 
     private void ReadInput()
@@ -57,6 +70,8 @@ public class InputDisplay : MonoBehaviour
 
     private void AddInput(string text)
     {
+        ResetTimer();
+
         if (LatestInput.Count >= 5)
         {
             LatestInput.Dequeue();
@@ -75,5 +90,10 @@ public class InputDisplay : MonoBehaviour
         }
 
         Display.text = text;
+    }
+
+    private void ResetTimer()
+    {
+        _clearTimer = ClearTime;
     }
 }
